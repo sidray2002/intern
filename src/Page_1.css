@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+h1{
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+
 .Page_1{
     display: block;
 }
@@ -107,4 +112,15 @@ button:hover{
 .active-circles{
     background: rgb(22, 94, 22);
     color: #fff;
+}
+
+
+.error{
+    display: none;
+    text-align: centre;
+    color: red;
+}
+
+.Page_3 p{
+    margin: 10px;
 }

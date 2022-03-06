@@ -22,12 +22,24 @@ const Page_1 = () => {
         console.log(event.target.value);
     }
 
+
+   const page1_check = (event) => {
+    event.preventDefault();
+       if(iniName==="" || iniEmail==="" || iniPhone==="") 
+       {
+        document.getElementsByClassName('error')[0].style.display = 'block';
+       }
+       else{
+        page_1Submit(event);
+       }
+   }
+
     const page_1Submit = (event) => {
         event.preventDefault();
         document.getElementsByClassName('Page_1')[0].style.display = 'none';
         document.getElementsByClassName('Page_2')[0].style.display = 'block';
         document.getElementsByClassName('circles')[1].classList.add('active-circles');
-        // document.getElementsByClassName('circles')[0].classList.remove('active-circles');
+        document.getElementsByClassName('error')[0].style.display = 'none';
     }
 
     const page_1Back = (event) => {
@@ -35,6 +47,12 @@ const Page_1 = () => {
         document.getElementsByClassName('Page_1')[0].style.display = 'block';
         document.getElementsByClassName('Page_2')[0].style.display = 'none';
         document.getElementsByClassName('circles')[1].classList.remove('active-circles');
+    }
+    const page_2Back = (event) => {
+        event.preventDefault();
+        document.getElementsByClassName('Page_2')[0].style.display = 'block';
+        document.getElementsByClassName('Page_3')[0].style.display = 'none';
+        document.getElementsByClassName('circles')[2].classList.remove('active-circles');
     }
 
     const [iniGender, setGender] = useState('male')
@@ -62,6 +80,7 @@ const Page_1 = () => {
             <div className='body-page'>
                 <div className='form-container'>
                     <form className='Page_1'>
+                        <h1>Details</h1>
                         <label> Name </label>
                         <input type='text' onChange={updateName} name='name' value={iniName} />
                         <br />
@@ -71,16 +90,18 @@ const Page_1 = () => {
                         <br />
 
                         <label> Phone </label>
-                        <input type='tel' onChange={updatePhone} name='phone' value={iniPhone} />
+                        <input type='tel' onChange={updatePhone} name='phone' value={iniPhone}/>
                         <br />
                         <div className='button-div-upd'>
-                            <button onClick={page_1Submit}> Continue </button>
+                            <button onClick={page1_check }> Continue </button>
                         </div>
                     </form>
 
 
                     <form onSubmit={page_2View} className='Page_2'>
-                        <label> Gender </label>
+                    <h1>More Details</h1>
+                    <label> Gender </label>
+                        
                         <select name="gender" id="" value={iniGender} onChange={updateGender}>
                             <option value='male'> Male </option>
                             <option value='female'> Female </option>
@@ -103,6 +124,13 @@ const Page_1 = () => {
                         <p>{iniPhone}</p>
                         <p>{iniGender}</p>
                         <p>{iniAddress}</p>
+                        <div className='button-div'>
+                        <button onClick={page_2Back}> Back </button>
+                        <button type="submit"> Submit </button>
+                    </div></div>
+
+                    <div className='error'>
+                    Check Again    
                     </div>
 
                     <div className='circle-div'>
@@ -110,6 +138,8 @@ const Page_1 = () => {
                         <span className="circles"> 2 </span>
                         <span className="circles"> 3 </span>
                     </div>
+
+                    
                 </div>
 
             </div>
