@@ -25,7 +25,7 @@ const Page_1 = () => {
 
    const page1_check = (event) => {
     event.preventDefault();
-    let i=0,j=0,c=0;
+    let i=0,c=0;
        for(i=0;i<iniPhone.length;i++)
        {
             if(iniPhone.charAt(i)===9 || 
