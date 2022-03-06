@@ -56,8 +56,8 @@ const Page_1 = () => {
            }
        }
        console.log(iniEmail.substring(iniEmail.length-4,iniEmail.length));
-       if(iniEmail.substring(iniEmail.length-4,iniEmail.length)!==".com" || 
-       iniEmail.substring(iniEmail.length-4,iniEmail.length)!==".in" || 
+       if(iniEmail.substring(iniEmail.length-4,iniEmail.length)!==".com" &&
+       iniEmail.substring(iniEmail.length-4,iniEmail.length)!==".in" &&
        iniEmail.substring(iniEmail.length-4,iniEmail.length)!==".in")
        {
            c=1;
@@ -104,6 +104,17 @@ const Page_1 = () => {
         setAddress(event.target.value);
     }
 
+    const page2_check = (event) => {
+        event.preventDefault();
+        if(iniAddress==="") 
+       {
+        document.getElementsByClassName('error')[0].style.display = 'block';
+       }
+       else{
+        page_2View(event);
+       }
+    }
+
     const page_2View = (event) => {
         event.preventDefault();
         document.getElementsByClassName('Page_2')[0].style.display = 'none';
@@ -136,7 +147,7 @@ const Page_1 = () => {
                     </form>
 
 
-                    <form onSubmit={page_2View} className='Page_2'>
+                    <form className='Page_2'>
                     <h1>More Details</h1>
                     <label> Gender </label>
                         
@@ -152,7 +163,7 @@ const Page_1 = () => {
 
                         <div className='button-div'>
                             <button onClick={page_1Back}> Back </button>
-                            <button onClick={page_2View}> Continue </button>
+                            <button onClick={page2_check}> Continue </button>
                         </div>
                     </form>
 
