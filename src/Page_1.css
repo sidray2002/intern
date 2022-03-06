@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Page_1{
+    display: block;
+}
+
+.Page_2{
+    display: none;
+}
+
+.Page_3{
+    display: none;
+}
+
+.active-class{
+    display: block;
+}
+
+.body-page{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* min-width: 50%;
+    min-height: 50%; */
+    background: whitesmoke;
+    padding: 20px 40px;
+    border-radius: 30px;
+    flex-direction: column;
+}
+
+form{
+    height: 100%;
+    width: 100%;
+}
+input{
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+input:focus{
+    border: solid 0.3px black;
+    transition: all 0.3s;
+}
+
+.button-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+}
+
+.button-div-upd{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.circle-div{
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+button{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: #fff;
+    outline: none;
+    border: none;
+}
+
+button:hover{
+ background: black;
+ color: #fff;
+ transition: all 0.3s;
+}
+
+.circles{
+    background-color: rgb(19, 194, 19);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.active-circles{
+    background: rgb(22, 94, 22);
+    color: #fff;
+}
