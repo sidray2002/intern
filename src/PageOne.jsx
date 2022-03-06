@@ -28,16 +28,16 @@ const Page_1 = () => {
     let i=0,j=0,c=0;
        for(i=0;i<iniPhone.length;i++)
        {
-            if(iniPhone.charAt(i)==9 || 
-            iniPhone.charAt(i)==1 || 
-            iniPhone.charAt(i)==2 ||
-            iniPhone.charAt(i)==3 ||
-            iniPhone.charAt(i)==4 ||
-            iniPhone.charAt(i)==5 ||
-            iniPhone.charAt(i)==6 ||
-            iniPhone.charAt(i)==7 ||
-            iniPhone.charAt(i)==8 ||
-            iniPhone.charAt(i)==0)
+            if(iniPhone.charAt(i)===9 || 
+            iniPhone.charAt(i)===1 || 
+            iniPhone.charAt(i)===2 ||
+            iniPhone.charAt(i)===3 ||
+            iniPhone.charAt(i)===4 ||
+            iniPhone.charAt(i)===5 ||
+            iniPhone.charAt(i)===6 ||
+            iniPhone.charAt(i)===7 ||
+            iniPhone.charAt(i)===8 ||
+            iniPhone.charAt(i)===0)
             {
             
             }
