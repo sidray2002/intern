@@ -46,6 +46,8 @@ const Page_1 = () => {
             }
     }
     
+    if(c===0)
+    {
     c=1;
 
     for(i=0;i<iniEmail.length;i++)
@@ -55,14 +57,13 @@ const Page_1 = () => {
                c=0; break;
            }
        }
-       console.log(iniEmail.substring(iniEmail.length-4,iniEmail.length));
        if(iniEmail.substring(iniEmail.length-4,iniEmail.length)!==".com" &&
        iniEmail.substring(iniEmail.length-4,iniEmail.length)!==".in" &&
        iniEmail.substring(iniEmail.length-4,iniEmail.length)!==".in")
        {
            c=1;
        }
-       
+    } 
        if(iniName==="" || iniEmail==="" || iniPhone==="" || c!==0) 
        {
         document.getElementsByClassName('error')[0].style.display = 'block';
