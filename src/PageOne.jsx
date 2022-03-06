@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Page_1.css';
 
 
-const Page_1 = () => {
+const PageOne = () => {
     // Check();
     const [iniName, setName] = useState('');
     const updateName = (event) => {
