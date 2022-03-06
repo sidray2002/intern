@@ -56,12 +56,17 @@ const Page_1 = () => {
            {
                c=0; break;
            }
-       }
-       if(iniEmail.substring(iniEmail.length-4,iniEmail.length)!==".com" &&
-       iniEmail.substring(iniEmail.length-4,iniEmail.length)!==".in" &&
+       
+    } 
+    }
+         if(c===0)
+    {
+    c=1;
+
+       if(iniEmail.substring(iniEmail.length-4,iniEmail.length)!==".com" ||
        iniEmail.substring(iniEmail.length-4,iniEmail.length)!==".in")
        {
-           c=1;
+           c=0;
        }
     } 
        if(iniName==="" || iniEmail==="" || iniPhone==="" || c!==0) 
