@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Page_1.css';
 
 
-const PageOne = () => {
+const Page_1 = () => {
     // Check();
     const [iniName, setName] = useState('');
     const updateName = (event) => {
@@ -25,7 +25,45 @@ const PageOne = () => {
 
    const page1_check = (event) => {
     event.preventDefault();
-       if(iniName==="" || iniEmail==="" || iniPhone==="") 
+    let i=0,j=0,c=0;
+       for(i=0;i<iniPhone.length;i++)
+       {
+            if(iniPhone.charAt(i)==9 || 
+            iniPhone.charAt(i)==1 || 
+            iniPhone.charAt(i)==2 ||
+            iniPhone.charAt(i)==3 ||
+            iniPhone.charAt(i)==4 ||
+            iniPhone.charAt(i)==5 ||
+            iniPhone.charAt(i)==6 ||
+            iniPhone.charAt(i)==7 ||
+            iniPhone.charAt(i)==8 ||
+            iniPhone.charAt(i)==0)
+            {
+            
+            }
+            else{
+                c++;
+            }
+    }
+    
+    c=1;
+
+    for(i=0;i<iniEmail.length;i++)
+       {
+           if(iniEmail.charAt(i)==='@') 
+           {
+               c=0; break;
+           }
+       }
+       console.log(iniEmail.substring(iniEmail.length-4,iniEmail.length));
+       if(iniEmail.substring(iniEmail.length-4,iniEmail.length)!==".com" || 
+       iniEmail.substring(iniEmail.length-4,iniEmail.length)!==".in" || 
+       iniEmail.substring(iniEmail.length-4,iniEmail.length)!==".in")
+       {
+           c=1;
+       }
+       
+       if(iniName==="" || iniEmail==="" || iniPhone==="" || c!==0) 
        {
         document.getElementsByClassName('error')[0].style.display = 'block';
        }
@@ -150,4 +188,4 @@ const PageOne = () => {
 }
 
 
-export default PageOne;
+export default Page_1;
