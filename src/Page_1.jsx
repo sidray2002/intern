@@ -119,11 +119,12 @@ const Page_1 = () => {
                     </form>
 
                     <div className='Page_3'>
-                        <h1>{iniName}</h1>
-                        <p>{iniEmail}</p>
-                        <p>{iniPhone}</p>
-                        <p>{iniGender}</p>
-                        <p>{iniAddress}</p>
+                        <h1>Preview</h1>
+                        <p>Name: {iniName}</p>
+                        <p>Email: {iniEmail}</p>
+                        <p>Phone: {iniPhone}</p>
+                        <p>Gender: {iniGender}</p>
+                        <p>Address: {iniAddress}</p>
                         <div className='button-div'>
                         <button onClick={page_2Back}> Back </button>
                         <button type="submit"> Submit </button>
